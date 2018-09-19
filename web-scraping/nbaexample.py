@@ -15,16 +15,13 @@ soup = BeautifulSoup(browser.page_source, 'lxml')
 
 #section = soup.find('section', class_='block-league-content')
 #section = soup.find('section', class_='row nba-player-index__row')
-# getting all nba's players name
+# getting nba's players name
 section = soup.find('section', class_='row expanded ')
 
+# displaying on terminal all nba players
 for player in section.find_all('a'):
     print player.text
     #print player['href']
 
-
-#print section
-
-#print browser.page_source
 
 browser.quit()
