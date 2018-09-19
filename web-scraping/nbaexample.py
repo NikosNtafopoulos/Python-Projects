@@ -20,6 +20,8 @@ section = soup.find('section', class_='row expanded ')
 
 for player in section.find_all('a'):
     print player.text
+    #print player['href']
+
 
 #print section
 
